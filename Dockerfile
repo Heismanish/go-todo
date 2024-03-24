@@ -12,7 +12,10 @@ RUN go build -o main ./
 
 EXPOSE 4000
 
-ENV MONGO_URI=mongodb+srv://manishgu231:qRmSX2eMRmRE8eK4@cluster0.qyeqeis.mongodb.net/
+
+# ENV MONGO_URI=mongodb+srv://manishgu231:qRmSX2eMRmRE8eK4@cluster0.qyeqeis.mongodb.net/
+COPY .env /usr/src/app 
+
 
 CMD ["./main"]
 
